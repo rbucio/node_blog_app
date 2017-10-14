@@ -18,7 +18,7 @@ app.set('views', path.join(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
 // SET PATH TO PUBLIC FOLDER
-app.use(express.static(path.join(__dirname + 'public')));
+app.use(express.static(path.join(__dirname + '/public')));
 
 
 //
@@ -32,8 +32,10 @@ app.use(bodyParser.json());
 // ROUTES
 //
 const appRoutes = require('./routes/app.js');
+const blogRoutes = require('./routes/blog.js');
 
 app.use('/', appRoutes);
+app.use('/blog', blogRoutes);
 
 app.listen(3000, () => {
     console.log('SERVER IS RUNNING!')

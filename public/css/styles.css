@@ -1,0 +1,77 @@
+/* ------------------------------------------------------
+    GENERAL STYLES
+---------------------------------------------------------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    max-width: 960px;
+}
+
+/* ------------------------------------------------------
+    TYPOGRAPHY
+---------------------------------------------------------*/
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'Open Sans Condensed', serif;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: #424342;
+}
+
+/* ------------------------------------------------------
+    NAVIGATION BAR
+---------------------------------------------------------*/
+nav {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.siteTitle {
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 45px;
+    color: #424342;
+}
+.siteTitle:hover {
+    color: #424342;
+    text-decoration: none;
+}
+.addPost {
+    margin-top: 20px;
+}
+
+/* ------------------------------------------------------
+    FORMS
+---------------------------------------------------------*/
+
+.blogPostNewForm {
+    padding: 60px 0;
+}
+.formTitle {
+    margin-bottom: 35px;
+}
+
+
+/* ------------------------------------------------------
+    BUTTONS
+---------------------------------------------------------*/
+.btn-default {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.btn-default:hover {
+    background-color: #fff;
+}
+.blue-btn {
+    border-color: #80ced7;
+    background-color: #80ced7;
+    color: #fff;
+}
+.blue-btn:hover {
+    border-color: #80ced7;
+    background-color: #fff;
+    color: #80ced7;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><%= pageTitle %></title>
+
+        <% include ./partials/_headMeta %>
+
+    </head>
+    <body>
+
+        <% include ./partials/_navigation %>
+
+        <div class="blogPostNewForm container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="formTitle">Add a new blog post</h1>
+                    <form action="/blog" method="post">
+                        <div class="form-group">
+                            <label for="">Title</label>
+                            <input type="text" name="postTitle" value="" class="form-control" placeholder="Post Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Image</label>
+                            <input type="text" name="postImage" value="" class="form-control" placeholder="Image Url">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Content</label>
+                            <textarea name="postContent" rows="8" cols="80" placeholder="Add content here.." class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">ADD BLOG POST</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <% include ./partials/_scripts %>
+
+    </body>
+</html>

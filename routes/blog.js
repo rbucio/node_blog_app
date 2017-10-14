@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.render('home', { pageTitle: 'Blogly' });
+router.get('/new', (req, res) => {
+    res.render('blogNew', { pageTitle: 'Create Post' });
 })
 
 
