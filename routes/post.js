@@ -16,19 +16,6 @@ router.get('/', (req, res) => {
 
 });
 //
-// SHOW SINGLE POST
-//
-router.get('/:id', (req, res) => {
-
-    Post.findOne({_id: req.params.id}, (err, post) => {
-
-        if (err) console.log(err)
-
-        res.render('singlePost', { pageTitle: post.title, post: post });
-    });
-
-});
-//
 // CREATE BLOG POST
 //
 router.post('/', (req, res) => {
@@ -76,6 +63,19 @@ router.post('/', (req, res) => {
 router.get('/new', (req, res) => {
 
     res.render('postNew', { pageTitle: 'Create Post' });
+
+});
+//
+// SHOW SINGLE POST
+//
+router.get('/:id', (req, res) => {
+
+    Post.findOne({_id: req.params.id}, (err, post) => {
+
+        if (err) console.log(err)
+
+        res.render('singlePost', { pageTitle: post.title, post: post });
+    });
 
 });
 

@@ -11,15 +11,28 @@
 
         <% include ./partials/_navigation %>
 
-        <div class="container postList">
+        <div class="pageHeader" style="background-image: url(<%= post.image %>)">
+            <div class="pageHeaderCover">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center singlePostTitle"><%= post.title %></h1>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- END HEADER COVER -->
+        </div> <!-- END POST HEADER -->
+        <div class="container postContainer">
             <div class="row">
-                <div class="col-md-12 postListItem">
-                    <h1 class="text-center"><%= post.title %></h1>
-                    <img src="<%= post.image %>" alt="<%= post.title %>" class="img img-responsive">
+                <div class="col-md-12 postMeta">
+                    <h4 class="text-center">Published <span><%= moment(post.datePublished, 'YYYYMMDD').fromNow() %></span> by <span><%= post.author %></span></h4>
+                </div> <!-- META DATA FOR POST -->
+                <div class="col-md-12 postContent">
+                    <p><%= post.content %></p>
+                    <p><%= post.content %></p>
                 </div>
             </div>
         </div>
-
 
 
 
