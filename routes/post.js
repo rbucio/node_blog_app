@@ -78,5 +78,16 @@ router.get('/:id', (req, res) => {
     });
 
 });
+//
+// EDIT POST
+//
+router.get('/:id/edit', (req, res) => {
 
+    Post.findOne({_id: req.params.id}, (err, post) => {
+        if (err) console.log(err);
+
+        res.render('editPost', {pageTitle: 'Edit ' + post.title, post: post});
+    });
+
+});
 module.exports = router;
