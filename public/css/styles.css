@@ -8,6 +8,9 @@ body {
 .container {
     max-width: 960px;
 }
+a:hover {
+    text-decoration: none;
+}
 
 /* ------------------------------------------------------
     TYPOGRAPHY
@@ -80,6 +83,10 @@ nav {
     ALL POSTS
 ---------------------------------------------------------*/
 
-.allPosts {
-    padding: 50px 15px 30px 15px;
+.postList {
+    max-width: 700px;
+    padding: 60px 15px 30px 15px;
+}
+.postLink:hover h2 {
+    color: #80ced7;
 }
