@@ -30,7 +30,6 @@ h4, h5, h6 {
 nav {
     background-color: #fff;
     padding: 20px 0;
-    border-bottom: 2px solid #ccc;
 }
 
 .siteTitle {
@@ -80,6 +79,10 @@ nav {
     background-color: #fff;
     color: #80ced7;
 }
+.edit {
+    text-transform: uppercase;
+    color: #ccc;
+}
 
 /* ------------------------------------------------------
     ALL POSTS
@@ -113,6 +116,7 @@ nav {
     color: #fff;
     font-size: 65px;
     margin-top: 200px;
+    text-shadow: 1px 1px 3px #000;
 }
 .postMeta {
     padding-bottom: 20px;

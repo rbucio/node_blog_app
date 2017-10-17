@@ -5,17 +5,6 @@ const router = express.Router();
 const Post = require('../models/post');
 
 //
-// GET ALL POST
-//
-router.get('/', (req, res) => {
-
-    Post.find({}, (err, posts) => {
-        if (err) console.log(err);
-        res.render('posts', { pageTitle: 'All Post', posts: posts });
-    });
-
-});
-//
 // CREATE BLOG POST
 //
 router.post('/', (req, res) => {
@@ -90,4 +79,24 @@ router.get('/:id/edit', (req, res) => {
     });
 
 });
+//
+// UPDATE POST
+//
+router.post('/:id', (req, res) => {
+
+    Post.findOne({_id: req.params.id}, (err, post) => {
+        if (err) console.log(err);
+
+        post.title = req.body.postTitle;
+        post.author = req.body.postAuthor;
+        post.image = req.body.postImage;
+        post.content = req.body.postContent;
+
+        post.save((err) => {
+            if (err) console.log(err);
+
+            res.redirect('/posts/' + post._id + '/edit');
+        })
+    })
+})
 module.exports = router;
