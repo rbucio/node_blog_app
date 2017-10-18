@@ -96,7 +96,17 @@ router.post('/:id', (req, res) => {
             if (err) console.log(err);
 
             res.redirect('/posts/' + post._id + '/edit');
-        })
-    })
-})
+        });
+    });
+});
+//
+// DELETE POST
+//
+router.get('/:id/delete', (req, res) => {
+    Post.findByIdAndRemove({_id: req.params.id}, (err) => {
+        if (err) console.log(err);
+
+        res.redirect('/');
+    });
+});
 module.exports = router;

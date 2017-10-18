@@ -33,7 +33,7 @@ nav {
 }
 
 .siteTitle {
-    font-family: 'Kaushan Script', sans-serif;
+    font-family: 'Nova Cut', sans-serif;
     font-size: 45px;
     color: #424342;
     font-weight: bold;
@@ -82,6 +82,15 @@ nav {
 .edit {
     text-transform: uppercase;
     color: #ccc;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+.delete,
+.delete:hover {
+    background-color: red;
+    border: 1px solid red;
+    color: #fff;
 }
 
 /* ------------------------------------------------------
