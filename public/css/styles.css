@@ -92,7 +92,10 @@ nav {
     border: 1px solid red;
     color: #fff;
 }
-
+.showCommentForm:focus {
+    outline: none;
+    background-color: #fff;
+}
 /* ------------------------------------------------------
     ALL POSTS
 ---------------------------------------------------------*/
