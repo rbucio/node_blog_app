@@ -50,8 +50,8 @@ nav {
     FORMS
 ---------------------------------------------------------*/
 
-.blogPostNewForm {
-    padding: 60px 0;
+.blogPostForm {
+    padding: 60px 10px;
 }
 .formTitle {
     margin-bottom: 35px;
@@ -144,4 +144,17 @@ nav {
     font-weight: 300;
     line-height: 35px;
     margin-bottom: 25px;
+}
+
+/* ------------------------------------------------------
+    COMMENTS
+---------------------------------------------------------*/
+.comments-container {
+    padding: 30px 10px;
+}
+.commentsTitle {
+    margin: 0;
+}
+#commentForm {
+    padding: 20px 10px;
 }

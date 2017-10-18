@@ -30,11 +30,30 @@
                 <div class="col-md-12 postContent">
                     <p><%= post.content %></p>
                     <p><%= post.content %></p>
-                </div>
-                <div class="col-md12 text-right">
+                </div> <!-- POST CONTENT -->
+                <div class="col-md12 text-center">
                     <a href="/posts/<%= post._id %>/edit" class="btn edit">edit post</a>
                 </div>
             </div>
+            <div class="row comments-container" id="addComment">
+                <div class="col-md-12">
+                    <h3 class="pull-left commentsTitle">comments</h3>
+                    <button class="btn btn-default showCommentForm pull-right">add comment</button>
+                </div>
+                <div class="col-md-10 col-md-offset-1" id="commentForm">
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" name="commentName" placeholder="Name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Comment</label>
+                            <textarea name="commentBody" rows="8" cols="80" placeholder="Add your comment..." class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">post comment</button>
+                    </form>
+                </div>
+            </div> <!-- END COMMENTS CONTAINER -->
         </div>
 
 
